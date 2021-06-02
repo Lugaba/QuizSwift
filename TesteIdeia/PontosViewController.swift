@@ -8,9 +8,12 @@
 import UIKit
 
 class PontosViewController: UIViewController {
-
+    var pontuacao: Int = 0
+    @IBOutlet weak var pontosFinal: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view.
         
@@ -22,6 +25,11 @@ class PontosViewController: UIViewController {
     }
     
 
+    @IBAction func reiniciar(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func goBackMenu(_ sender: Any) {
         backTwo()
     }

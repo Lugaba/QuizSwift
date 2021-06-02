@@ -20,8 +20,6 @@ class ViewController: UIViewController {
     var resposta = ""
     
     // elementos do storyboard
-    @IBOutlet weak var pontos: UILabel!
-    @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var primeiraAlt: UIButton!
     @IBOutlet weak var segundaAlt: UIButton!
     @IBOutlet weak var terceiraAlt: UIButton!
@@ -37,21 +35,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         feedback.textColor = .black
-        pontos.textColor = .black
-        nome.textColor = .black
         botoes = [primeiraAlt, segundaAlt, terceiraAlt, quartaAlt]
         mudarQuestao.isHidden = true
         goPontos.isHidden = true
         updateQuestion()
     }
 
-
     @IBAction func changeImage(_ sender: UIButton) {
         if permitidoResponder == true {
             permitidoMudar = true
             if sender.tag == 1 {
                 pontuacao += 1
-                pontos.text = "Pontuacao: \(pontuacao)"
                 feedback.text = "✅ Resposta Correta"
             } else {
                 feedback.text = "❌ Resposta errada\nAlternativa correta: \(resposta)"
@@ -83,7 +77,6 @@ class ViewController: UIViewController {
             posicaoResposta = Int.random(in: 0..<simbolos.count)
             resposta = respostas[posicaoResposta]
             imagem.image = UIImage(systemName: simbolos[posicaoResposta])
-            nome.text = respostas[posicaoResposta]
             botoes = botoes.shuffled()
             for s in 0..<botoes.count {
                 if s == 0 {
@@ -103,7 +96,6 @@ class ViewController: UIViewController {
             }
         }
     }
-    
     //funcao de ir pra pontuacao -> mudar pra outra controller view
 }
 

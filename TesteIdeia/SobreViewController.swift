@@ -1,5 +1,5 @@
 //
-//  MenuViewController.swift
+//  SobreViewController.swift
 //  TesteIdeia
 //
 //  Created by Luca Hummel on 02/06/21.
@@ -7,12 +7,11 @@
 
 import UIKit
 
-class MenuViewController: UIViewController {
+class SobreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
         // Do any additional setup after loading the view.
     }
     
