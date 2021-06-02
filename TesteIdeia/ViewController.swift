@@ -47,8 +47,8 @@ class ViewController: UIViewController {
 
 
     @IBAction func changeImage(_ sender: UIButton) {
-        permitidoMudar = true
         if permitidoResponder == true {
+            permitidoMudar = true
             if sender.tag == 1 {
                 pontuacao += 1
                 pontos.text = "Pontuacao: \(pontuacao)"
@@ -57,20 +57,20 @@ class ViewController: UIViewController {
                 feedback.text = "❌ Resposta errada\nAlternativa correta: \(resposta)"
             }
         }
-        mudarQuestao.isHidden = false
+        if contador == 9{
+            goPontos.isHidden = false
+        } else {
+            mudarQuestao.isHidden = false
+        }
         permitidoResponder = false
     }
     
     @IBAction func clickNextQuestion(_ sender: Any) {
         if permitidoMudar == true{
-            if contador == 9 {
-                print("öi")
-            } else {
-                updateQuestion()
-                permitidoMudar = false
-                permitidoResponder = true
-                mudarQuestao.isHidden = true
-            }
+            updateQuestion()
+            permitidoMudar = false
+            permitidoResponder = true
+            mudarQuestao.isHidden = true
             contador += 1
         }
     }
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     func updateQuestion(){
         feedback.text = ""
         var sorteados: [Int] = []
-        if contador < 10 { //contador para ter apenas 10 perguntas
+        if contador < 9 { //contador para ter apenas 10 perguntas
             posicaoResposta = Int.random(in: 0..<simbolos.count)
             resposta = respostas[posicaoResposta]
             imagem.image = UIImage(systemName: simbolos[posicaoResposta])
@@ -100,9 +100,6 @@ class ViewController: UIViewController {
                     sorteados.append(numeroSorteado)
                     botoes[s].setTitle(respostas[numeroSorteado], for: .normal)
                 }
-            }
-            if contador == 8{
-                mudarQuestao.setTitle("Pontuação", for: .normal)
             }
         }
     }
