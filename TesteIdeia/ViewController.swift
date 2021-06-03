@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var simbolos: [String] = ["airplane.circle", "film", "book.circle", "checkmark.circle", "camera.circle", "cloud", "earpods", "gear", "link.circle", "text.alignleft", "volume.slash", "highlighter", "pencil", "doc", "bookmark", "text.book.closed", "folder", "command", "restart", "sleep", "wake", "network", "timelapse", "eject", "memories", "target", "location", "bell", "mappin", "return", "trash", "paperplane", "note", "square.and.pencil", "tray", "flag", "magnifyingglass", "plus.magnifyingglass", "scribble"]
+    var simbolos: [String] = ["airplane.circle", "film", "book.circle", "checkmark.circle", "camera.circle", "cloud", "earpods", "gear", "link.circle", "text.alignleft", "volume.slash", "highlighter", "pencil", "doc", "bookmark", "text.book.closed", "folder", "command", "restart", "sleep", "wake", "network", "timelapse", "eject", "memories", "target", "location", "bell", "mappin", "return", "trash", "paperplane", "note", "square.and.pencil", "tray", "flag", "magnifyingglass", "plus.magnifyingglass", "scribble", "calendar", "timer", "sunrise", "sunset", "mic", "mic.slash", "record.circle", "lock.fill", "lock.open.fill", "flashlight.off.fill", "flashlight.on.fill", "keyboard", "photo", "video", "phone", "antenna.radiowaves.left.and.right", "alarm"]
     
-    var respostas: [String] = ["Modo avião", "Filme", "Ler", "Certo", "Tirar Foto", "Nuvem", "Earpods", "Ajustes", "Link", "Alinhar a esquerda", "Mudo", "Marca-texto", "Lápis", "Arquivo", "Salvar", "Livro de texto", "Pasta", "Command", "Reiniciar", "Adormecer", "Despertar", "Network", "Timelapse", "Ejetar", "Memórias", "Alvo", "Localização", "Notificação", "Mapeamento", "Voltar", "Deletar", "Enviar", "Nota", "Escrever", "Caixa de entrada", "Sinalizar", "Buscar", "Zoom", "Rabiscar"]
+    var respostas: [String] = ["Modo avião", "Filme", "Ler", "Certo", "Tirar Foto", "Nuvem", "Earpods", "Ajustes", "Link", "Alinhar a esquerda", "Sem som", "Marca-texto", "Lápis", "Arquivo", "Salvar", "Livro de texto", "Pasta", "Command", "Reiniciar", "Adormecer", "Despertar", "Network", "Timelapse", "Ejetar", "Memórias", "Alvo", "Localização", "Notificação", "Mapeamento", "Voltar", "Deletar", "Enviar", "Nota", "Escrever", "Caixa de entrada", "Sinalizar", "Buscar", "Zoom", "Rabiscar", "Calendário", "Cronômetro", "Nascer do sol", "Pôr do sol", "Microfone", "Mudo", "Gravar", "Bloqueado", "Desbloqueado", "Lanterna desligada", "Lanterna ligada", "Teclado", "Foto", "Vídeo", "Chamada", "Rede móvel", "Alarme"]
     var contador = 0
     var pontuacao = 0
     var posicaoResposta = 0
@@ -61,6 +61,21 @@ class ViewController: UIViewController {
         
         ponteiro = simbolos.count
         botoes = [primeiraAlt, segundaAlt, terceiraAlt, quartaAlt]
+        mudarQuestao.isHidden = true
+        goPontos.isHidden = true
+        updateQuestion()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        //Reiniciar o jogo sem o usuario ver
+        contador = 0
+        pontuacao = 0
+        ponteiro = simbolos.count
+        posicaoResposta = 0
+        permitidoMudar = false
+        permitidoResponder = true
+        resposta = ""
+        feedback.text = ""
         mudarQuestao.isHidden = true
         goPontos.isHidden = true
         updateQuestion()
@@ -139,17 +154,6 @@ class ViewController: UIViewController {
             let pontosViewController = segue.destination as? PontosViewController
                 pontosViewController?.pontuacao=pontuacao
         }
-        contador = 0
-        pontuacao = 0
-        ponteiro = simbolos.count
-        posicaoResposta = 0
-        permitidoMudar = false
-        permitidoResponder = true
-        resposta = ""
-        feedback.text = ""
-        mudarQuestao.isHidden = true
-        goPontos.isHidden = true
-        updateQuestion()
     }
 }
 
