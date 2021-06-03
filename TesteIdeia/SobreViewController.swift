@@ -8,10 +8,16 @@
 import UIKit
 
 class SobreViewController: UIViewController {
-
+    @IBOutlet weak var texto1: UITextView!
+    @IBOutlet weak var texto2: UITextView!
+    @IBOutlet weak var texto3: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        texto1.isEditable = false
+        texto2.isEditable = false
+        texto3.isEditable = false
         // Do any additional setup after loading the view.
     }
     

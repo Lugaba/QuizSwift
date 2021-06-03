@@ -9,14 +9,19 @@ import UIKit
 
 class PontosViewController: UIViewController {
     var pontuacao: Int = 0
-    @IBOutlet weak var pontosFinal: UILabel!
+    @IBOutlet weak var labelPontos: UILabel!
+    @IBOutlet weak var botaoJogar: UIButton!
+    @IBOutlet weak var botaoSair: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //estilos
         view.backgroundColor = .white
+        botaoJogar.layer.cornerRadius = 20
+        botaoSair.layer.cornerRadius = 20
         self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view.
-        
+        labelPontos.text = "\(pontuacao)/10"
     }
     
     func backTwo() {

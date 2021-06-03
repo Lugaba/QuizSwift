@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,8 +23,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iY-Da-XKr">
-                                <rect key="frame" x="149.66666666666666" y="610" width="91" height="42"/>
+                                <rect key="frame" x="140" y="628" width="110" height="60"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="2TU-t8-ogN"/>
+                                    <constraint firstAttribute="width" constant="110" id="VIE-fZ-kYu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
                                 <state key="normal" title="Sobre">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,8 +38,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5w-t5-URX">
-                                <rect key="frame" x="119.66666666666669" y="508" width="151" height="62"/>
+                                <rect key="frame" x="110" y="508" width="170" height="80"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="5gN-V4-hHz"/>
+                                    <constraint firstAttribute="height" constant="80" id="Hhn-J4-geg"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="50"/>
                                 <state key="normal" title="Jogar">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -47,7 +54,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qpK-8M-7Pn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="fbX-gP-8Y6" firstAttribute="top" secondItem="qpK-8M-7Pn" secondAttribute="top" constant="140" id="3o3-iy-bZO"/>
                             <constraint firstItem="Q5w-t5-URX" firstAttribute="centerX" secondItem="3iV-7m-5BL" secondAttribute="centerX" id="K5y-O5-OdH"/>
@@ -58,6 +65,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BPj-rg-VpU"/>
+                    <connections>
+                        <outlet property="botaoJogar" destination="Q5w-t5-URX" id="Vdu-PA-a5Z"/>
+                        <outlet property="botaoSobre" destination="9iY-Da-XKr" id="VVL-QG-BOS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B0x-bT-BJh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -124,7 +135,7 @@
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gF5-l9-GOq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ToG-xL-DAk" firstAttribute="leading" secondItem="gF5-l9-GOq" secondAttribute="leading" constant="20" id="27U-4X-TeA"/>
                             <constraint firstItem="I2b-ET-oVU" firstAttribute="top" secondItem="ToG-xL-DAk" secondAttribute="bottom" constant="20" id="2Pr-sT-qgQ"/>
@@ -144,6 +155,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="adp-9F-UdO"/>
+                    <connections>
+                        <outlet property="texto1" destination="ToG-xL-DAk" id="4fS-GR-NlZ"/>
+                        <outlet property="texto2" destination="vyg-fa-HzT" id="1Ie-dp-ZoB"/>
+                        <outlet property="texto3" destination="TXb-wo-SOX" id="QlA-lq-Y9U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ytO-sN-Q1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -158,14 +174,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5KE-P0-DNz">
-                                <rect key="frame" x="126.66666666666667" y="168.33333333333334" width="136.66666666666663" height="168"/>
+                                <rect key="frame" x="126.66666666666667" y="108.33333333333331" width="136.66666666666663" height="168"/>
                                 <imageReference key="image" image="mappin" catalog="system" symbolScale="medium"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trX-oG-xvU">
-                                <rect key="frame" x="20" y="416.66666666666669" width="350" height="30"/>
+                                <rect key="frame" x="20" y="356.66666666666669" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="g2l-6S-QMy"/>
+                                    <constraint firstAttribute="height" constant="60" id="g2l-6S-QMy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="PrimeiraAlt">
@@ -176,10 +192,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-cK-fLU">
-                                <rect key="frame" x="20" y="461.66666666666669" width="350" height="30"/>
+                                <rect key="frame" x="20" y="431.66666666666669" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="DlA-cu-ehK"/>
+                                    <constraint firstAttribute="height" constant="60" id="DlA-cu-ehK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="SegundaAlt">
@@ -190,10 +206,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-rP-GOP">
-                                <rect key="frame" x="20" y="551.66666666666663" width="350" height="30"/>
+                                <rect key="frame" x="20" y="581.66666666666663" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PdF-IC-NH7"/>
+                                    <constraint firstAttribute="height" constant="60" id="PdF-IC-NH7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="QuartaAlt">
@@ -204,10 +220,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTj-8P-fBy">
-                                <rect key="frame" x="20" y="506.66666666666674" width="350" height="30"/>
+                                <rect key="frame" x="20" y="506.66666666666674" width="350" height="60"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="L3h-7W-9mq"/>
+                                    <constraint firstAttribute="height" constant="60" id="L3h-7W-9mq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="TerceiraAlt">
@@ -218,7 +234,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGu-ym-w1q">
-                                <rect key="frame" x="157" y="351.66666666666669" width="76" height="50"/>
+                                <rect key="frame" x="157" y="291.66666666666669" width="76" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="v3j-CM-atu"/>
                                 </constraints>
@@ -227,19 +243,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nf-r5-tOE">
-                                <rect key="frame" x="116.66666666666669" y="703.66666666666663" width="157" height="32"/>
+                                <rect key="frame" x="110" y="731.66666666666663" width="170" height="40"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fh7-nV-9KA"/>
+                                    <constraint firstAttribute="width" constant="170" id="pQc-Sh-WgG"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="Sua pontuação">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TC8-Iw-w4x" kind="show" id="YSW-Ht-L4x"/>
+                                    <segue destination="TC8-Iw-w4x" kind="show" identifier="transicaoGamePont" id="YSW-Ht-L4x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-0h-apZ">
-                                <rect key="frame" x="104.66666666666669" y="651.66666666666663" width="181" height="32"/>
+                                <rect key="frame" x="95" y="671.66666666666663" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="H8a-Z8-qhX"/>
+                                    <constraint firstAttribute="width" constant="200" id="hjO-u6-ygq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="Próxima questão">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -250,7 +274,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Djc-rP-GOP" firstAttribute="top" secondItem="gTj-8P-fBy" secondAttribute="bottom" constant="15" id="0b7-YN-OgQ"/>
                             <constraint firstItem="gTj-8P-fBy" firstAttribute="top" secondItem="vmb-cK-fLU" secondAttribute="bottom" constant="15" id="1GL-EJ-vuN"/>
@@ -264,8 +288,8 @@
                             <constraint firstItem="trX-oG-xvU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MBE-BH-vwi"/>
                             <constraint firstItem="vmb-cK-fLU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NXU-ns-4KU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gTj-8P-fBy" secondAttribute="trailing" constant="20" id="OVd-3M-Baa"/>
-                            <constraint firstItem="6SV-0h-apZ" firstAttribute="top" secondItem="Djc-rP-GOP" secondAttribute="bottom" constant="70" id="Qce-GP-rMR"/>
-                            <constraint firstItem="5KE-P0-DNz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="Rfi-2H-mLM"/>
+                            <constraint firstItem="6SV-0h-apZ" firstAttribute="top" secondItem="Djc-rP-GOP" secondAttribute="bottom" constant="30" id="Qce-GP-rMR"/>
+                            <constraint firstItem="5KE-P0-DNz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Rfi-2H-mLM"/>
                             <constraint firstItem="gTj-8P-fBy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Tg9-Re-vFP"/>
                             <constraint firstItem="gTj-8P-fBy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XBy-bJ-GAA"/>
                             <constraint firstItem="Djc-rP-GOP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gJj-8g-WrZ"/>
@@ -304,41 +328,77 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-dJ-xH8">
-                                <rect key="frame" x="180" y="650" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="sair"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-dJ-xH8">
+                                <rect key="frame" x="140" y="668" width="110" height="60"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="97l-mz-1C6"/>
+                                    <constraint firstAttribute="width" constant="110" id="Mir-n0-grF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
+                                <state key="normal" title="Sair">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="goBackMenu:" destination="TC8-Iw-w4x" eventType="touchUpInside" id="ZVp-RY-Rab"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLf-rv-R5L">
-                                <rect key="frame" x="174" y="145" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-Q2-snZ">
-                                <rect key="frame" x="134" y="540" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Jogar Novamento"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-Q2-snZ">
+                                <rect key="frame" x="110" y="548" width="170" height="80"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="MHl-og-rnU"/>
+                                    <constraint firstAttribute="width" constant="170" id="ka6-Fk-aQg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="50"/>
+                                <state key="normal" title="Jogar">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="reiniciar:" destination="TC8-Iw-w4x" eventType="touchUpInside" id="Rxm-sb-4fA"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pontos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfT-l2-ERl">
+                                <rect key="frame" x="115" y="288" width="160" height="60"/>
+                                <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ELs-Yu-DoF"/>
+                                    <constraint firstAttribute="height" constant="60" id="paI-GD-qsu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pontuação" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GNC-83-HHC">
+                                <rect key="frame" x="60" y="188" width="270" height="50"/>
+                                <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="50"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XuA-s9-SIx"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FAF-Q2-snZ" firstAttribute="centerX" secondItem="LIL-Gg-Z75" secondAttribute="centerX" id="K9J-BK-h0f"/>
+                            <constraint firstItem="ZfT-l2-ERl" firstAttribute="centerX" secondItem="LIL-Gg-Z75" secondAttribute="centerX" id="V00-sy-JnS"/>
+                            <constraint firstItem="hd9-dJ-xH8" firstAttribute="centerX" secondItem="LIL-Gg-Z75" secondAttribute="centerX" id="a50-I9-tLQ"/>
+                            <constraint firstItem="hd9-dJ-xH8" firstAttribute="top" secondItem="FAF-Q2-snZ" secondAttribute="bottom" constant="40" id="dG7-7h-S2R"/>
+                            <constraint firstItem="GNC-83-HHC" firstAttribute="centerX" secondItem="LIL-Gg-Z75" secondAttribute="centerX" id="ePG-lv-dmy"/>
+                            <constraint firstItem="FAF-Q2-snZ" firstAttribute="top" secondItem="ZfT-l2-ERl" secondAttribute="bottom" constant="200" id="hTR-Y9-Frl"/>
+                            <constraint firstItem="ZfT-l2-ERl" firstAttribute="top" secondItem="GNC-83-HHC" secondAttribute="bottom" constant="50" id="vyG-0i-x5p"/>
+                            <constraint firstItem="GNC-83-HHC" firstAttribute="top" secondItem="XuA-s9-SIx" secondAttribute="top" constant="100" id="wL4-yX-3s1"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3G9-DE-l4f"/>
                     <connections>
-                        <outlet property="pontosFinal" destination="zLf-rv-R5L" id="g8A-w6-Zid"/>
+                        <outlet property="botaoJogar" destination="FAF-Q2-snZ" id="0tj-57-4DF"/>
+                        <outlet property="botaoSair" destination="hd9-dJ-xH8" id="9L6-Eo-Q2a"/>
+                        <outlet property="labelPontos" destination="ZfT-l2-ERl" id="vsO-jO-3Hw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhd-Yc-So8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1894" y="94"/>
+            <point key="canvasLocation" x="1893.8461538461538" y="93.838862559241704"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mk0-b4-y0z">
@@ -361,8 +421,5 @@
     </scenes>
     <resources>
         <image name="mappin" catalog="system" width="105" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

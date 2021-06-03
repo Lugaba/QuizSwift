@@ -8,11 +8,15 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+    @IBOutlet weak var botaoJogar: UIButton!
+    @IBOutlet weak var botaoSobre: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        botaoJogar.layer.cornerRadius = 20
+        botaoSobre.layer.cornerRadius = 20
+        navigationController?.navigationBar.barTintColor = .white
         // Do any additional setup after loading the view.
     }
     

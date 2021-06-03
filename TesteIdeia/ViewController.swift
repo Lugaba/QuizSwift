@@ -33,8 +33,16 @@ class ViewController: UIViewController {
     var botoes: [UIButton] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        // estilos
         view.backgroundColor = .white
         feedback.textColor = .black
+        primeiraAlt.layer.cornerRadius = 20
+        segundaAlt.layer.cornerRadius = 20
+        terceiraAlt.layer.cornerRadius = 20
+        quartaAlt.layer.cornerRadius = 20
+        mudarQuestao.layer.cornerRadius = 5
+        goPontos.layer.cornerRadius = 5
+        
         botoes = [primeiraAlt, segundaAlt, terceiraAlt, quartaAlt]
         mudarQuestao.isHidden = true
         goPontos.isHidden = true
@@ -51,7 +59,7 @@ class ViewController: UIViewController {
                 feedback.text = "❌ Resposta errada\nAlternativa correta: \(resposta)"
             }
         }
-        if contador == 9{
+        if contador == 10{
             goPontos.isHidden = false
         } else {
             mudarQuestao.isHidden = false
@@ -65,19 +73,18 @@ class ViewController: UIViewController {
             permitidoMudar = false
             permitidoResponder = true
             mudarQuestao.isHidden = true
-            contador += 1
         }
     }
     
     // funcao para mudas as perguntas
     func updateQuestion(){
-        feedback.text = ""
         var sorteados: [Int] = []
-        if contador < 9 { //contador para ter apenas 10 perguntas
+        if contador < 10 { //contador para ter apenas 10 perguntas
+            feedback.text = "Questão \(contador + 1)"
             posicaoResposta = Int.random(in: 0..<simbolos.count)
             resposta = respostas[posicaoResposta]
             imagem.image = UIImage(systemName: simbolos[posicaoResposta])
-            botoes = botoes.shuffled()
+            botoes.shuffle()
             for s in 0..<botoes.count {
                 if s == 0 {
                     botoes[s].tag = 1
@@ -94,8 +101,26 @@ class ViewController: UIViewController {
                     botoes[s].setTitle(respostas[numeroSorteado], for: .normal)
                 }
             }
+            contador += 1
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "transicaoGamePont" {
+                let pontosViewController = segue.destination as? PontosViewController
+                pontosViewController?.pontuacao=pontuacao
+            }
+            contador = 0
+            pontuacao = 0
+            posicaoResposta = 0
+            permitidoMudar = false
+            permitidoResponder = true
+            resposta = ""
+            feedback.text = ""
+            mudarQuestao.isHidden = true
+            goPontos.isHidden = true
+            updateQuestion()
+        }
     //funcao de ir pra pontuacao -> mudar pra outra controller view
 }
 
