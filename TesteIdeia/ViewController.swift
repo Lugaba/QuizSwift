@@ -36,12 +36,26 @@ class ViewController: UIViewController {
         // estilos
         view.backgroundColor = .white
         feedback.textColor = .black
+        
         primeiraAlt.layer.cornerRadius = 20
+        
         segundaAlt.layer.cornerRadius = 20
+        
         terceiraAlt.layer.cornerRadius = 20
+        
         quartaAlt.layer.cornerRadius = 20
+        
         mudarQuestao.layer.cornerRadius = 5
+        mudarQuestao.layer.shadowColor = UIColor.black.cgColor
+        mudarQuestao.layer.shadowOpacity = 0.4 //opacidade
+        mudarQuestao.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        mudarQuestao.layer.shadowRadius = 4 //espalhar sombra
+        
         goPontos.layer.cornerRadius = 5
+        goPontos.layer.shadowColor = UIColor.black.cgColor
+        goPontos.layer.shadowOpacity = 0.4 //opacidade
+        goPontos.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        goPontos.layer.shadowRadius = 4 //espalhar sombra
         
         botoes = [primeiraAlt, segundaAlt, terceiraAlt, quartaAlt]
         mudarQuestao.isHidden = true

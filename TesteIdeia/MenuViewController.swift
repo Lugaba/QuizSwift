@@ -13,14 +13,27 @@ class MenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //estilos
         view.backgroundColor = .white
+        
+        //Botao jogar - arredondar e sombra
         botaoJogar.layer.cornerRadius = 20
+        botaoJogar.layer.shadowColor = UIColor.black.cgColor
+        botaoJogar.layer.shadowOpacity = 0.4 //opacidade
+        botaoJogar.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        botaoJogar.layer.shadowRadius = 4 //espalhar sombra
+        
+        //Botao sobre - arredondar e sombra
         botaoSobre.layer.cornerRadius = 20
+        botaoSobre.layer.shadowColor = UIColor.black.cgColor
+        botaoSobre.layer.shadowOpacity = 0.4 //opacidade
+        botaoSobre.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        botaoSobre.layer.shadowRadius = 4 //espalhar sombra
+        
         navigationController?.navigationBar.barTintColor = .white
         // Do any additional setup after loading the view.
     }
-    
-
     /*
     // MARK: - Navigation
 

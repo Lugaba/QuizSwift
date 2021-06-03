@@ -17,8 +17,19 @@ class PontosViewController: UIViewController {
         super.viewDidLoad()
         //estilos
         view.backgroundColor = .white
+        
         botaoJogar.layer.cornerRadius = 20
+        botaoJogar.layer.shadowColor = UIColor.black.cgColor
+        botaoJogar.layer.shadowOpacity = 0.4 //opacidade
+        botaoJogar.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        botaoJogar.layer.shadowRadius = 4 //espalhar sombra
+        
         botaoSair.layer.cornerRadius = 20
+        botaoSair.layer.shadowColor = UIColor.black.cgColor
+        botaoSair.layer.shadowOpacity = 0.4 //opacidade
+        botaoSair.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        botaoSair.layer.shadowRadius = 4 //espalhar sombra
+        
         self.navigationItem.setHidesBackButton(true, animated: true)
         // Do any additional setup after loading the view.
         labelPontos.text = "\(pontuacao)/10"
