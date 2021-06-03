@@ -83,12 +83,22 @@ class ViewController: UIViewController {
 
     @IBAction func changeImage(_ sender: UIButton) {
         if permitidoResponder == true {
+            sender.layer.borderWidth = 2
             permitidoMudar = true
             if sender.tag == 1 {
                 pontuacao += 1
                 feedback.text = "✅ Resposta Correta"
             } else {
                 feedback.text = "❌ Resposta errada\nAlternativa correta: \(resposta)"
+            }
+            for i in 0..<botoes.count{
+                if botoes[i].tag == 1 {
+                    botoes[i].backgroundColor = UIColor(red: 0.47, green: 0.87, blue: 0.47, alpha: 1.00)
+                    botoes[i].layer.borderColor = UIColor.green.cgColor
+                } else {
+                    botoes[i].backgroundColor = UIColor(red: 1.00, green: 0.41, blue: 0.38, alpha: 1.00)
+                    botoes[i].layer.borderColor = UIColor.red.cgColor
+                }
             }
         }
         if contador == 10{
@@ -121,6 +131,8 @@ class ViewController: UIViewController {
             imagem.image = UIImage(systemName: simbolos[posicaoResposta])
             botoes.shuffle()
             for s in 0..<botoes.count {
+                botoes[s].layer.borderWidth = 0
+                botoes[s].backgroundColor = UIColor(red: 0.44, green: 0.71, blue: 1.00, alpha: 1.00)
                 if s == 0 {
                     botoes[s].tag = 1
                     botoes[s].setTitle(respostas[posicaoResposta], for: .normal)
@@ -140,6 +152,7 @@ class ViewController: UIViewController {
         }
     }
     
+    //Funcao para remover e adicionar o elemento no final do vetor para o ponteiro saber a partir de onde nao é pra ler
     func removerAddFinal(position: Int){
         let elementImage = simbolos[position]
         let elementAnswer = respostas[position]
@@ -149,6 +162,7 @@ class ViewController: UIViewController {
         respostas.append(elementAnswer)
     }
     
+    //funcao que envia a pontuacao para a outra viewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "transicaoGamePont" {
             let pontosViewController = segue.destination as? PontosViewController
