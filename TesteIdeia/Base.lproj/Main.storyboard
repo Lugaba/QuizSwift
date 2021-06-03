@@ -80,10 +80,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9iY-Da-XKr">
-                                <rect key="frame" x="140" y="626.33333333333337" width="110" height="60"/>
+                                <rect key="frame" x="140" y="590.33333333333337" width="110" height="42"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="2TU-t8-ogN"/>
                                     <constraint firstAttribute="width" constant="110" id="VIE-fZ-kYu"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
@@ -95,11 +94,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5w-t5-URX">
-                                <rect key="frame" x="110" y="426.33333333333331" width="170" height="80"/>
+                                <rect key="frame" x="110" y="426.33333333333331" width="170" height="62"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="5gN-V4-hHz"/>
-                                    <constraint firstAttribute="height" constant="80" id="Hhn-J4-geg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="50"/>
                                 <state key="normal" title="Jogar">
@@ -110,10 +108,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJa-ZU-GfK">
-                                <rect key="frame" x="115" y="536.33333333333337" width="160" height="60"/>
+                                <rect key="frame" x="115" y="518.33333333333337" width="160" height="42"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="cTw-vO-ndE"/>
                                     <constraint firstAttribute="width" constant="160" id="ffd-58-WWA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
@@ -269,11 +266,8 @@
                                 <imageReference key="image" image="hand.point.up.left.fill" catalog="system" symbolScale="medium"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trX-oG-xvU">
-                                <rect key="frame" x="20" y="356.66666666666669" width="350" height="60"/>
+                                <rect key="frame" x="20" y="356.66666666666669" width="350" height="32"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="g2l-6S-QMy"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="PrimeiraAlt">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -283,11 +277,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmb-cK-fLU">
-                                <rect key="frame" x="20" y="431.66666666666669" width="350" height="60"/>
+                                <rect key="frame" x="20" y="403.66666666666669" width="350" height="32"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DlA-cu-ehK"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="SegundaAlt">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -297,11 +288,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djc-rP-GOP">
-                                <rect key="frame" x="20" y="581.66666666666663" width="350" height="60"/>
+                                <rect key="frame" x="20" y="497.66666666666674" width="350" height="32"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="PdF-IC-NH7"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="QuartaAlt">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -311,11 +299,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTj-8P-fBy">
-                                <rect key="frame" x="20" y="506.66666666666674" width="350" height="60"/>
+                                <rect key="frame" x="20" y="450.66666666666669" width="350" height="32"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="L3h-7W-9mq"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
                                 <state key="normal" title="TerceiraAlt">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -334,7 +319,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6SV-0h-apZ">
-                                <rect key="frame" x="95" y="671.66666666666663" width="200" height="40"/>
+                                <rect key="frame" x="95" y="559.66666666666663" width="200" height="40"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="H8a-Z8-qhX"/>
@@ -349,7 +334,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Nf-r5-tOE">
-                                <rect key="frame" x="110" y="671.66666666666663" width="170" height="40"/>
+                                <rect key="frame" x="110" y="559.66666666666663" width="170" height="40"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="fh7-nV-9KA"/>
@@ -420,10 +405,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd9-dJ-xH8">
-                                <rect key="frame" x="140" y="650.66666666666663" width="110" height="60"/>
+                                <rect key="frame" x="140" y="632.66666666666663" width="110" height="42"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="97l-mz-1C6"/>
                                     <constraint firstAttribute="width" constant="110" id="Mir-n0-grF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="30"/>
@@ -435,10 +419,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-Q2-snZ">
-                                <rect key="frame" x="110" y="530.66666666666663" width="170" height="80"/>
+                                <rect key="frame" x="110" y="530.66666666666663" width="170" height="62"/>
                                 <color key="backgroundColor" red="0.4431372549" green="0.70980392160000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="MHl-og-rnU"/>
                                     <constraint firstAttribute="width" constant="170" id="ka6-Fk-aQg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="50"/>
