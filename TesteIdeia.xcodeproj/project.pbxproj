@@ -24,7 +24,7 @@
 		DF5428A5266801230082BFB1 /* PontosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontosViewController.swift; sourceTree = "<group>"; };
 		DF5428A72668198C0082BFB1 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
 		DF5428A926694DCF0082BFB1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		DFCC6B4826667FCF008ECBCB /* TesteIdeia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteIdeia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFCC6B4826667FCF008ECBCB /* iCone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCC6B4B26667FCF008ECBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCC6B4D26667FCF008ECBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DFCC6B4F26667FCF008ECBCB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		DFCC6B4926667FCF008ECBCB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DFCC6B4826667FCF008ECBCB /* TesteIdeia.app */,
+				DFCC6B4826667FCF008ECBCB /* iCone.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,14 +77,14 @@
 				DFCC6B5926667FD1008ECBCB /* Info.plist */,
 			);
 			path = TesteIdeia;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DFCC6B4726667FCF008ECBCB /* TesteIdeia */ = {
+		DFCC6B4726667FCF008ECBCB /* iCone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DFCC6B5C26667FD1008ECBCB /* Build configuration list for PBXNativeTarget "TesteIdeia" */;
+			buildConfigurationList = DFCC6B5C26667FD1008ECBCB /* Build configuration list for PBXNativeTarget "iCone" */;
 			buildPhases = (
 				DFCC6B4426667FCF008ECBCB /* Sources */,
 				DFCC6B4526667FCF008ECBCB /* Frameworks */,
@@ -94,9 +94,9 @@
 			);
 			dependencies = (
 			);
-			name = TesteIdeia;
+			name = iCone;
 			productName = TesteIdeia;
-			productReference = DFCC6B4826667FCF008ECBCB /* TesteIdeia.app */;
+			productReference = DFCC6B4826667FCF008ECBCB /* iCone.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -126,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DFCC6B4726667FCF008ECBCB /* TesteIdeia */,
+				DFCC6B4726667FCF008ECBCB /* iCone */,
 			);
 		};
 /* End PBXProject section */
@@ -347,7 +347,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DFCC6B5C26667FD1008ECBCB /* Build configuration list for PBXNativeTarget "TesteIdeia" */ = {
+		DFCC6B5C26667FD1008ECBCB /* Build configuration list for PBXNativeTarget "iCone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DFCC6B5D26667FD1008ECBCB /* Debug */,

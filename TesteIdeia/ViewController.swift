@@ -42,12 +42,16 @@ class ViewController: UIViewController {
         feedback.textColor = .black
         
         primeiraAlt.layer.cornerRadius = 20
+        primeiraAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
         segundaAlt.layer.cornerRadius = 20
+        segundaAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
         terceiraAlt.layer.cornerRadius = 20
+        terceiraAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
         quartaAlt.layer.cornerRadius = 20
+        quartaAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
         mudarQuestao.layer.cornerRadius = 5
         mudarQuestao.layer.shadowColor = UIColor.black.cgColor

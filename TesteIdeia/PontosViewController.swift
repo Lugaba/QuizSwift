@@ -21,6 +21,9 @@ class PontosViewController: UIViewController {
         labelPontos.layer.cornerRadius = 10
         labelPontos.layer.masksToBounds = true
         
+        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+        botaoSair.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
+        
         botaoJogar.layer.cornerRadius = 20
         botaoJogar.layer.shadowColor = UIColor.black.cgColor
         botaoJogar.layer.shadowOpacity = 0.4 //opacidade

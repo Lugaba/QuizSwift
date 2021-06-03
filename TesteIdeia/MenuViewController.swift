@@ -18,6 +18,10 @@ class MenuViewController: UIViewController {
         //estilos
         view.backgroundColor = .white
         
+        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+        botaoTut.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
+        botaoSobre.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
+        
         //Botao jogar - arredondar e sombra
         botaoJogar.layer.cornerRadius = 20
         botaoJogar.layer.shadowColor = UIColor.black.cgColor
