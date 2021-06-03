@@ -18,6 +18,9 @@ class PontosViewController: UIViewController {
         //estilos
         view.backgroundColor = .white
         
+        labelPontos.layer.cornerRadius = 10
+        labelPontos.layer.masksToBounds = true
+        
         botaoJogar.layer.cornerRadius = 20
         botaoJogar.layer.shadowColor = UIColor.black.cgColor
         botaoJogar.layer.shadowOpacity = 0.4 //opacidade

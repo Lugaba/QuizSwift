@@ -33,6 +33,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var goPontos: UIButton!
     
     var botoes: [UIButton] = []
+    
+    //Configuracoes iniciais dos elementos quando carregar a view
     override func viewDidLoad() {
         super.viewDidLoad()
         // estilos
@@ -66,6 +68,7 @@ class ViewController: UIViewController {
         updateQuestion()
     }
     
+    //Reiniciar o jogo quando a tela desaparecer
     override func viewDidDisappear(_ animated: Bool) {
         //Reiniciar o jogo sem o usuario ver
         contador = 0
@@ -81,7 +84,9 @@ class ViewController: UIViewController {
         updateQuestion()
     }
 
-    @IBAction func changeImage(_ sender: UIButton) {
+    
+    // Altera feedback -> nao consigo alterar o nome da funcao
+    @IBAction func changeFeedback(_ sender: UIButton) {
         if permitidoResponder == true {
             sender.layer.borderWidth = 2
             permitidoMudar = true

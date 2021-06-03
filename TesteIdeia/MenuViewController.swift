@@ -10,6 +10,7 @@ import UIKit
 class MenuViewController: UIViewController {
     @IBOutlet weak var botaoJogar: UIButton!
     @IBOutlet weak var botaoSobre: UIButton!
+    @IBOutlet weak var botaoTut: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +24,13 @@ class MenuViewController: UIViewController {
         botaoJogar.layer.shadowOpacity = 0.4 //opacidade
         botaoJogar.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         botaoJogar.layer.shadowRadius = 4 //espalhar sombra
+        
+        //Botao tutotial - arredondar e sombra
+        botaoTut.layer.cornerRadius = 20
+        botaoTut.layer.shadowColor = UIColor.black.cgColor
+        botaoTut.layer.shadowOpacity = 0.4 //opacidade
+        botaoTut.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
+        botaoTut.layer.shadowRadius = 4 //espalhar sombra
         
         //Botao sobre - arredondar e sombra
         botaoSobre.layer.cornerRadius = 20

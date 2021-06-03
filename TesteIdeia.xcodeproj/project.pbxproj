@@ -10,6 +10,7 @@
 		DF5428A42667FF7A0082BFB1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5428A32667FF7A0082BFB1 /* MenuViewController.swift */; };
 		DF5428A6266801230082BFB1 /* PontosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5428A5266801230082BFB1 /* PontosViewController.swift */; };
 		DF5428A82668198C0082BFB1 /* SobreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5428A72668198C0082BFB1 /* SobreViewController.swift */; };
+		DF5428AA26694DCF0082BFB1 /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5428A926694DCF0082BFB1 /* TutorialViewController.swift */; };
 		DFCC6B4C26667FCF008ECBCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC6B4B26667FCF008ECBCB /* AppDelegate.swift */; };
 		DFCC6B4E26667FCF008ECBCB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC6B4D26667FCF008ECBCB /* SceneDelegate.swift */; };
 		DFCC6B5026667FCF008ECBCB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFCC6B4F26667FCF008ECBCB /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 		DF5428A32667FF7A0082BFB1 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		DF5428A5266801230082BFB1 /* PontosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PontosViewController.swift; sourceTree = "<group>"; };
 		DF5428A72668198C0082BFB1 /* SobreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SobreViewController.swift; sourceTree = "<group>"; };
+		DF5428A926694DCF0082BFB1 /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		DFCC6B4826667FCF008ECBCB /* TesteIdeia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TesteIdeia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFCC6B4B26667FCF008ECBCB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DFCC6B4D26667FCF008ECBCB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				DFCC6B5126667FCF008ECBCB /* Main.storyboard */,
 				DF5428A5266801230082BFB1 /* PontosViewController.swift */,
 				DFCC6B5426667FD1008ECBCB /* Assets.xcassets */,
+				DF5428A926694DCF0082BFB1 /* TutorialViewController.swift */,
 				DFCC6B5626667FD1008ECBCB /* LaunchScreen.storyboard */,
 				DF5428A72668198C0082BFB1 /* SobreViewController.swift */,
 				DFCC6B5926667FD1008ECBCB /* Info.plist */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5428A82668198C0082BFB1 /* SobreViewController.swift in Sources */,
+				DF5428AA26694DCF0082BFB1 /* TutorialViewController.swift in Sources */,
 				DFCC6B5026667FCF008ECBCB /* ViewController.swift in Sources */,
 				DFCC6B4C26667FCF008ECBCB /* AppDelegate.swift in Sources */,
 				DFCC6B4E26667FCF008ECBCB /* SceneDelegate.swift in Sources */,
