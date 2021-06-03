@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     var permitidoMudar = false
     var permitidoResponder = true
     var resposta = ""
+    var ponteiro = 0
+
     
     // elementos do storyboard
     @IBOutlet weak var primeiraAlt: UIButton!
@@ -57,6 +59,7 @@ class ViewController: UIViewController {
         goPontos.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         goPontos.layer.shadowRadius = 4 //espalhar sombra
         
+        ponteiro = simbolos.count
         botoes = [primeiraAlt, segundaAlt, terceiraAlt, quartaAlt]
         mudarQuestao.isHidden = true
         goPontos.isHidden = true
@@ -96,6 +99,9 @@ class ViewController: UIViewController {
         if contador < 10 { //contador para ter apenas 10 perguntas
             feedback.text = "Questão \(contador + 1)"
             posicaoResposta = Int.random(in: 0..<simbolos.count)
+            while posicaoResposta >= ponteiro {
+                posicaoResposta = Int.random(in: 0..<simbolos.count)
+            }
             resposta = respostas[posicaoResposta]
             imagem.image = UIImage(systemName: simbolos[posicaoResposta])
             botoes.shuffle()
@@ -103,12 +109,12 @@ class ViewController: UIViewController {
                 if s == 0 {
                     botoes[s].tag = 1
                     botoes[s].setTitle(respostas[posicaoResposta], for: .normal)
-                    respostas.remove(at: posicaoResposta)
-                    simbolos.remove(at: posicaoResposta)
+                    removerAddFinal(position: posicaoResposta)
+                    ponteiro -= 1
                 } else {
                     botoes[s].tag = 0
                     var numeroSorteado = Int.random(in: 0..<simbolos.count)
-                    while sorteados.contains(numeroSorteado) {
+                    while sorteados.contains(numeroSorteado) || numeroSorteado >= ponteiro{
                         numeroSorteado = Int.random(in: 0..<simbolos.count)
                     }
                     sorteados.append(numeroSorteado)
@@ -119,22 +125,31 @@ class ViewController: UIViewController {
         }
     }
     
+    func removerAddFinal(position: Int){
+        let elementImage = simbolos[position]
+        let elementAnswer = respostas[position]
+        simbolos.remove(at: position)
+        respostas.remove(at: position)
+        simbolos.append(elementImage)
+        respostas.append(elementAnswer)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            if segue.identifier == "transicaoGamePont" {
-                let pontosViewController = segue.destination as? PontosViewController
+        if segue.identifier == "transicaoGamePont" {
+            let pontosViewController = segue.destination as? PontosViewController
                 pontosViewController?.pontuacao=pontuacao
-            }
-            contador = 0
-            pontuacao = 0
-            posicaoResposta = 0
-            permitidoMudar = false
-            permitidoResponder = true
-            resposta = ""
-            feedback.text = ""
-            mudarQuestao.isHidden = true
-            goPontos.isHidden = true
-            updateQuestion()
         }
-    //funcao de ir pra pontuacao -> mudar pra outra controller view
+        contador = 0
+        pontuacao = 0
+        ponteiro = simbolos.count
+        posicaoResposta = 0
+        permitidoMudar = false
+        permitidoResponder = true
+        resposta = ""
+        feedback.text = ""
+        mudarQuestao.isHidden = true
+        goPontos.isHidden = true
+        updateQuestion()
+    }
 }
 
