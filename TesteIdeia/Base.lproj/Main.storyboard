@@ -151,7 +151,7 @@
         <scene sceneID="MZR-E8-0lY">
             <objects>
                 <viewController id="BkG-YD-aCj" customClass="SobreViewController" customModule="iCone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qsy-TB-tXn" customClass="V">
+                    <view key="view" contentMode="scaleToFill" id="qsy-TB-tXn" customClass="View">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
