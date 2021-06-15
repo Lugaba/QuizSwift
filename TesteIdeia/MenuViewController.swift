@@ -18,26 +18,26 @@ class MenuViewController: UIViewController {
         //estilos
         view.backgroundColor = .white
         
-        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         botaoTut.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         botaoSobre.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
         //Botao jogar - arredondar e sombra
-        botaoJogar.layer.cornerRadius = 20
+        botaoJogar.layer.cornerRadius = 10
         botaoJogar.layer.shadowColor = UIColor.black.cgColor
         botaoJogar.layer.shadowOpacity = 0.4 //opacidade
         botaoJogar.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         botaoJogar.layer.shadowRadius = 4 //espalhar sombra
         
         //Botao tutotial - arredondar e sombra
-        botaoTut.layer.cornerRadius = 20
+        botaoTut.layer.cornerRadius = 10
         botaoTut.layer.shadowColor = UIColor.black.cgColor
         botaoTut.layer.shadowOpacity = 0.4 //opacidade
         botaoTut.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         botaoTut.layer.shadowRadius = 4 //espalhar sombra
         
         //Botao sobre - arredondar e sombra
-        botaoSobre.layer.cornerRadius = 20
+        botaoSobre.layer.cornerRadius = 10
         botaoSobre.layer.shadowColor = UIColor.black.cgColor
         botaoSobre.layer.shadowOpacity = 0.4 //opacidade
         botaoSobre.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento

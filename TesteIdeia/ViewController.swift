@@ -41,25 +41,25 @@ class ViewController: UIViewController {
         view.backgroundColor = .white
         feedback.textColor = .black
         
-        primeiraAlt.layer.cornerRadius = 20
+        primeiraAlt.layer.cornerRadius = 10
         primeiraAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
-        segundaAlt.layer.cornerRadius = 20
+        segundaAlt.layer.cornerRadius = 10
         segundaAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
-        terceiraAlt.layer.cornerRadius = 20
+        terceiraAlt.layer.cornerRadius = 10
         terceiraAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
-        quartaAlt.layer.cornerRadius = 20
+        quartaAlt.layer.cornerRadius = 10
         quartaAlt.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
-        mudarQuestao.layer.cornerRadius = 5
+        mudarQuestao.layer.cornerRadius = 10
         mudarQuestao.layer.shadowColor = UIColor.black.cgColor
         mudarQuestao.layer.shadowOpacity = 0.4 //opacidade
         mudarQuestao.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         mudarQuestao.layer.shadowRadius = 4 //espalhar sombra
         
-        goPontos.layer.cornerRadius = 5
+        goPontos.layer.cornerRadius = 10
         goPontos.layer.shadowColor = UIColor.black.cgColor
         goPontos.layer.shadowOpacity = 0.4 //opacidade
         goPontos.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento

@@ -21,16 +21,16 @@ class PontosViewController: UIViewController {
         labelPontos.layer.cornerRadius = 10
         labelPontos.layer.masksToBounds = true
         
-        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+        botaoJogar.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         botaoSair.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.07).isActive = true
         
-        botaoJogar.layer.cornerRadius = 20
+        botaoJogar.layer.cornerRadius = 10
         botaoJogar.layer.shadowColor = UIColor.black.cgColor
         botaoJogar.layer.shadowOpacity = 0.4 //opacidade
         botaoJogar.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
         botaoJogar.layer.shadowRadius = 4 //espalhar sombra
         
-        botaoSair.layer.cornerRadius = 20
+        botaoSair.layer.cornerRadius = 10
         botaoSair.layer.shadowColor = UIColor.black.cgColor
         botaoSair.layer.shadowOpacity = 0.4 //opacidade
         botaoSair.layer.shadowOffset = .init(width: 0, height: 4) //deslocamento
